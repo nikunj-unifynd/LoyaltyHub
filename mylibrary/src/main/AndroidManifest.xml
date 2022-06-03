@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lib.mylibrary">
+
+    <application>
+        <activity
+            android:name="com.lib.mylibrary.ui.feature_loyalty_home.presentation.LoyaltyHubActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Header900TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">@font/font_castle_t_bold</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="Header800TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/font_castle_t_bold</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="Header700TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/font_dinpro_bold</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="Header600TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/font_castle_t_bold</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="Header500TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/font_dinpro_bold</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="Header400TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/font_castle_t_bold</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="Header300TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/font_dinpro_bold</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="Header200TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/font_dinpro_black</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="Header100TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/font_dinot_bold</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="BodyTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/font_dinot_regular</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="ButtonRegularTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/font_dinpro_bold</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+</resources>

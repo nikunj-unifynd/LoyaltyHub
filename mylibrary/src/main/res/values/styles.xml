@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="LibraryTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_200</item>
+        <item name="colorAccent">@color/purple_200</item>
+        <item name="android:statusBarColor">#000000</item>
+
+    </style>
+
     <style name="Header900TextView" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">32sp</item>
         <item name="android:fontFamily">@font/font_castle_t_bold</item>
@@ -63,6 +72,12 @@
     <style name="ButtonRegularTextView" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">12sp</item>
         <item name="android:fontFamily">@font/font_dinpro_bold</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+    <style name="PreTextTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/font_dinpro_black</item>
         <item name="android:lineSpacingExtra">3dp</item>
         <item name="android:lineSpacingMultiplier">1</item>
     </style>

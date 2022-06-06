@@ -2,5 +2,6 @@ package com.lib.mylibrary.core.util
 
 object TextLabels {
 
-    var LOYALTY_HUB_HOME_TITLE = "Loyalty Hub"
+    var POINTS_CURRENCY_TEXT = "Points"
+    var GEMS_CURRENCY_TEXT = "Gems"
 }

@@ -1,6 +1,6 @@
 package com.lib.mylibrary.core.util
 
-object ColorsYou {
-    var BACKGROUND_COLOR = "#E8C653"
+object Colors {
+    var BACKGROUND_COLOR = "#FCFBF6"
     var TEXT_COLOR = "#693C14"
 }

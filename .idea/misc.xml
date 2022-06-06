@@ -4,8 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28229166666666666" />
+        <entry key="mylibrary/src/main/res/drawable/ic_chevron.xml" value="0.1785" />
+        <entry key="mylibrary/src/main/res/drawable/ic_coin.xml" value="0.1785" />
+        <entry key="mylibrary/src/main/res/drawable/ic_gem.xml" value="0.1785" />
+        <entry key="mylibrary/src/main/res/drawable/ic_gift_coloured.xml" value="0.1785" />
+        <entry key="mylibrary/src/main/res/drawable/ic_spin_wheel.xml" value="0.1785" />
+        <entry key="mylibrary/src/main/res/drawable/ic_survey.xml" value="0.1785" />
         <entry key="mylibrary/src/main/res/font/font_circularstd_bold.xml" value="0.3076923076923077" />
-        <entry key="mylibrary/src/main/res/layout/activity_loyalty_hub.xml" value="0.28125" />
+        <entry key="mylibrary/src/main/res/layout/activity_loyalty_hub.xml" value="0.24502164502164503" />
       </map>
     </option>
   </component>

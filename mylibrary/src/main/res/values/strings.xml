@@ -1,0 +1,21 @@
+<resources>
+    <string name="something_went_wrong">Something Went Wrong</string>
+    <string name="spin_the_wheel">Spin the Wheel</string>
+    <string name="spin_the_wheel_lower">Spin the wheel</string>
+    <string name="spin_again">Spin Again</string>
+    <string name="claim_your_free_spin">Claim Your Free Spin!</string>
+    <string name="spinning">Spinning...</string>
+    <string name="pay_and_spin">Pay &amp; Spin</string>
+    <string name="hurray">Hurray!</string>
+    <string name="hurray2">Hurray</string>
+    <string name="out_of_spins">Out of Spins</string>
+    <string name="we_have_a_message">We have a message!</string>
+    <string name="you_have_exhausted_your_spins">You have exhausted your spins</string>
+    <string name="you_have_exhausted_daily_spins">You have exhausted your daily spin(s)</string>
+    <string name="you_need_more_points_spin_details">You don’t have sufficient points balance in your wallet to spin the wheel.\n\nEarn more points by scanning bills or completing tasks.</string>
+    <string name="unlock_reward">Unlock Reward</string>
+    <string name="reward_unlocked">Reward Unlocked</string>
+    <string name="unlock_coupon">Unlock Coupon</string>
+    <string name="view_unlocked_coupons">View Unlocked Coupons</string>
+
+</resources>

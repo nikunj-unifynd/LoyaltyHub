@@ -6,6 +6,9 @@
 
     <application>
         <activity
+            android:name=".ui.feature_spin_wheel.presentation.SpinWheelFeedActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.feature_spin_wheel.presentation.SpinTheWheelActivity"
             android:exported="false" />
         <activity

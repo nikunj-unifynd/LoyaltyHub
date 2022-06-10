@@ -239,6 +239,15 @@ fun RecyclerView?.getCurrentPosition() : Int {
     return (this?.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
 }
 
+inline fun <reified T> Flow<T>.observeOnLifecycle(
+    lifecycleOwner: LifecycleOwner,
+    noinline collector: suspend (T) -> Unit
+) = FlowObserver(lifecycleOwner, this, collector)
+
+inline fun <reified T> Flow<T>.observeInLifecycle(
+    lifecycleOwner: LifecycleOwner
+) = FlowObserver(lifecycleOwner, this, {})
+
 class FlowObserver<T> (
     lifecycleOwner: LifecycleOwner,
     private val flow: Flow<T>,

@@ -1,7 +1,9 @@
 package com.lib.mylibrary.ui.feature_spin_wheel.presentation
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.lib.mylibrary.core.util.Constants
 import com.lib.mylibrary.core.util.UIState
 import com.lib.mylibrary.data.remote.ApiClient
 import com.lib.mylibrary.data.remote.customnetworkadapter.NetworkResponse
@@ -29,12 +31,14 @@ class SpinWheelFeedViewModel: ViewModel() {
                     } else {
                         uiStateChannel.send(UIState.Success(response.body.data))
          //               Timber.d("Spin Wheel data: ${response.body.data.spinWheels}")
+                        Log.d("ViewModel", "Data: " + {response.body.data.spinWheels})
                     }
                 }
 
                 is NetworkResponse.ServerError -> {
                     uiStateChannel.send(UIState.Error(response.body?.status?.code.toString()))
         //            Timber.d("Server Error")
+                    Log.d("ViewModel", " Server Error ")
                 }
 
                 is NetworkResponse.NetworkError -> {
@@ -45,6 +49,7 @@ class SpinWheelFeedViewModel: ViewModel() {
                 is NetworkResponse.UnknownError -> {
                     uiStateChannel.send(UIState.Error("Unknown Error"))
           //          Timber.d("Unknown Error")
+                    Log.d("ViewModel", " Unknown Error " + response.error.toString())
                 }
 
             }

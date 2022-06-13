@@ -13,7 +13,7 @@
         <entry key="mylibrary/src/main/res/layout/activity_loyalty_hub.xml" value="0.19113573407202217" />
         <entry key="mylibrary/src/main/res/layout/activity_spin_the_wheel.xml" value="0.23854166666666668" />
         <entry key="mylibrary/src/main/res/layout/activity_spin_wheel_feed.xml" value="0.23854166666666668" />
-        <entry key="mylibrary/src/main/res/layout/list_spin_wheel_item.xml" value="0.23854166666666668" />
+        <entry key="mylibrary/src/main/res/layout/list_spin_wheel_item.xml" value="0.45" />
         <entry key="mylibrary/src/main/res/layout/toolbar_generic.xml" value="0.2375" />
       </map>
     </option>

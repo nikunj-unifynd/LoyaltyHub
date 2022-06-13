@@ -9,9 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.bumptech.glide.Glide
 import com.lib.mylibrary.R
-import com.lib.mylibrary.core.util.hideView
-import com.lib.mylibrary.core.util.isVisible
-import com.lib.mylibrary.core.util.showView
+import com.lib.mylibrary.core.util.*
 import com.lib.mylibrary.data.remote.dto.SpinWheelFeedDto
 import com.lib.mylibrary.databinding.ListSpinWheelItemBinding
 
@@ -42,6 +40,10 @@ class SpinWheelFeedAdapter(private val interaction: Interaction? = null) :
     ) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(item: SpinWheelFeedDto.Data.SpinWheel, position: Int) {
+            binding.colors = Colors
+            binding.textLabels = TextLabels
+            binding.localColors = SpinWheelFeedColors
+            binding.executePendingBindings()
             binding.tvTitle.text = item.name
             if(item.benefitsData.isNullOrEmpty()){
                 binding.llCoupons.hideView()

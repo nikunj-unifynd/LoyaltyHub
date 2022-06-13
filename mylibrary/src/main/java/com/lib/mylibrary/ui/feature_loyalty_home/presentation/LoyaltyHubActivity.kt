@@ -8,6 +8,7 @@ import com.lib.mylibrary.R
 import com.lib.mylibrary.core.util.Colors
 import com.lib.mylibrary.core.util.TextLabels
 import com.lib.mylibrary.databinding.ActivityLoyaltyHubBinding
+import com.lib.mylibrary.ui.feature_spin_wheel.presentation.SpinWheelFeedActivity
 
 class LoyaltyHubActivity : AppCompatActivity() {
 
@@ -26,6 +27,10 @@ class LoyaltyHubActivity : AppCompatActivity() {
         binding.localColors = LoyaltyHubHomeColors
         binding.localTextLabels = LoyaltyHubHomeTextLabels
         binding.localImages = LoyaltyHubHomeImages
+
+        binding.cvSpinWheel.setOnClickListener{
+            SpinWheelFeedActivity.startActivity(this)
+        }
 
     }
 }

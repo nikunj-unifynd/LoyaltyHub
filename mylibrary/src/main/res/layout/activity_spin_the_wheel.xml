@@ -64,14 +64,10 @@
         android:layout_marginTop="21dp"
         android:layout_marginRight="16dp"
         android:layout_weight="1"
-        app:cardCornerRadius="90dp"
-        app:colorTypeActive="90"
-        app:colorTypeInActive="90"
-        app:isOutline="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:stroke="1">
+        >
 
         <RelativeLayout
             android:id="@+id/clPhoenixPoints"
@@ -369,8 +365,6 @@
                         android:layout_marginTop="20dp"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="1dp"
-                        app:strokeWidth="1dp"
-                        app:isOutline="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         >
@@ -419,8 +413,7 @@
                             android:layout_marginLeft="6dp"
                             android:rotation="180"
                             android:src="@drawable/ic_arrow_back"
-                            app:colorTypeActive="1"
-                            app:colorTypeInActive="1" />
+                            />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -459,13 +452,8 @@
                         android:layout_marginTop="20dp"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="1dp"
-                        app:colorTypeActive="83"
-                        app:colorTypeInActive="83"
-                        app:fillColorType="83"
-                        app:isOutline="true"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:stroke="1">
+                        app:layout_constraintEnd_toEndOf="parent">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -526,13 +514,9 @@
                         android:layout_marginTop="20dp"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="1dp"
-                        app:colorTypeActive="83"
-                        app:colorTypeInActive="83"
-                        app:fillColorType="83"
-                        app:isOutline="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:stroke="1">
+                        >
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -627,9 +611,7 @@
                             android:layout_marginEnd="10dp"
                             android:gravity="center_vertical"
                             android:text="x"
-                            style="@style/Header200TextView"
-                            app:colorTypeActive="1"
-                            app:colorTypeInActive="1" />
+                            style="@style/Header200TextView" />
 
                         <com.google.android.material.card.MaterialCardView
                             android:id="@+id/cvBrandLogo"
@@ -637,11 +619,8 @@
                             android:layout_height="32dp"
                             app:cardCornerRadius="5dp"
                             app:cardElevation="0dp"
-                            app:isOutline="true"
                             app:strokeWidth="0.5dp"
                             android:layout_marginStart="6dp"
-                            app:cardBorderColor="#E8C653"
-                            app:cardBgColor="#F9F6EC"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
@@ -768,7 +747,7 @@
             android:layout_marginBottom="20dp"
             android:visibility="gone"
             app:cardCornerRadius="8dp"
-            app:isOutline="false">
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -796,7 +775,6 @@
             android:layout_marginBottom="20dp"
             android:visibility="gone"
             app:cardCornerRadius="8dp"
-            app:isOutline="false"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <LinearLayout
@@ -824,8 +802,6 @@
             android:text="@string/you_have_exhausted_your_spins"
             android:visibility="gone"
             style="@style/Header300TextView"
-            app:colorTypeActive="120"
-            app:colorTypeInActive="120"
             app:layout_constraintBottom_toBottomOf="parent" />
 
     </LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="textLabels"
+            type="com.lib.mylibrary.core.util.TextLabels" />
+
+        <variable
+            name="colors"
+            type="com.lib.mylibrary.core.util.Colors" />
+
+        <variable
+            name="localColors"
+            type="com.lib.mylibrary.ui.feature_spin_wheel.presentation.SpinWheelFeedColors" />
+
+        <variable
+            name="viewModel"
+            type="com.lib.mylibrary.ui.feature_spin_wheel.presentation.SpinWheelFeedViewModel"/>
+
+    </data>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fcfbf6"
+    tools:context=".ui.feature_spin_wheel.presentation.SpinWheelFeedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="20dp">
+
+           <ImageView
+               android:id="@+id/ivBack"
+               android:layout_width="24dp"
+               android:layout_height="24dp"
+               android:src="@drawable/ic_back" />
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/tvTitle"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerHorizontal="true"
+               android:text="SPIN THE WHEEL"
+               style="@style/Header500TextView"
+               app:textViewColor="@{colors.TEXT_COLOR}"/>
+       </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSpinWheelDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            style="@style/StrongTextView"
+            app:textViewColor="@{localColors.FEATURE_CARD_SUB_TEXT_COLOR}"
+            android:text="@string/spin_wheel_feed_default_text"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_spin_wheel_feed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_spin_wheel_item"/>
+
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/noDataFound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fcfbf6"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:id="@+id/llEmptyViewBenefit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_marginTop="-32dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_illustration_empty_benefits" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/oops_with_exclamation"
+                        style="@style/Header400TextView"
+                        app:textViewColor="@{localColors.FEATURE_CARD_SUB_TEXT_COLOR}"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/no_active_spins"
+                        style="@style/SmallTextView"
+                        app:textViewColor="@{localColors.FEATURE_CARD_SUB_TEXT_COLOR}"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
+</layout>

@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lib.mylibrary">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application>
+        <activity
+            android:name=".ui.feature_spin_wheel.presentation.SpinWheelFeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.feature_spin_wheel.presentation.SpinTheWheelActivity"
+            android:exported="false" />
         <activity
             android:name="com.lib.mylibrary.ui.feature_loyalty_home.presentation.LoyaltyHubActivity"
             android:exported="false"
-            android:theme="@style/LibraryTheme"/>
+            android:theme="@style/LibraryTheme" />
     </application>
 
 </manifest>

@@ -17,6 +17,7 @@ android {
 
     buildTypes {
         release {
+            debuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -65,6 +66,10 @@ dependencies {
 
     // Lottie
     api "com.airbnb.android:lottie:3.4.4"
+
+
+    //timber
+    implementation "com.jakewharton.timber:timber:4.7.1"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

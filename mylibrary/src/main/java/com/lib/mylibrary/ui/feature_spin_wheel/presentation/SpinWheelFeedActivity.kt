@@ -14,6 +14,7 @@ import com.lib.mylibrary.core.util.*
 import com.lib.mylibrary.data.remote.dto.SpinWheelFeedDto
 import com.lib.mylibrary.databinding.ActivitySpinWheelFeedBinding
 import kotlinx.coroutines.flow.onEach
+import timber.log.Timber
 
 class SpinWheelFeedActivity : AppCompatActivity(), View.OnClickListener ,
     SpinWheelFeedAdapter.Interaction {
@@ -67,7 +68,8 @@ class SpinWheelFeedActivity : AppCompatActivity(), View.OnClickListener ,
     }
     override fun onClickSpinWheelFeedItem(position: Int, item: SpinWheelFeedDto.Data.SpinWheel) {
 
-  //      SpinTheWheelActivity.startActivity(this, item.id.toString())
+        Timber.d("onCreate: {${item.id.toString()}}")
+        SpinTheWheelActivity.startActivity(this, item.id.toString())
 
 //        // Post cleverTap event
 //        val map = java.util.HashMap<String, Any>()

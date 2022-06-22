@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="spin_background5">
+        <item>#FCFBF6</item>
+        <item>#C56546</item>
+        <item>#FCFBF6</item>
+        <item>#2AACAC</item>
+        <item>#504F98</item>
+    </array>
+    <array name="spin_background6">
+        <item>#FCFBF6</item>
+        <item>#C56546</item>
+        <item>#FCFBF6</item>
+        <item>#2AACAC</item>
+        <item>#FCFBF6</item>
+        <item>#504F98</item>
+    </array>
+    <array name="spin_background7">
+        <item>#FCFBF6</item>
+        <item>#C56546</item>
+        <item>#FCFBF6</item>
+        <item>#2AACAC</item>
+        <item>#E3BA30</item>
+        <item>#FCFBF6</item>
+        <item>#504F98</item>
+    </array>
+    <array name="spin_background8">
+        <item>#FCFBF6</item>
+        <item>#C56546</item>
+        <item>#FCFBF6</item>
+        <item>#2AACAC</item>
+        <item>#FCFBF6</item>
+        <item>#E3BA30</item>
+        <item>#FCFBF6</item>
+        <item>#504F98</item>
+    </array>
+    <array name="spin_background9">
+        <item>#FCFBF6</item>
+        <item>#8576B5</item>
+        <item>#C56546</item>
+        <item>#FCFBF6</item>
+        <item>#8F487C</item>
+        <item>#2AACAC</item>
+        <item>#FCFBF6</item>
+        <item>#504F98</item>
+        <item>#E3BA30</item>
+    </array>
+    <array name="spin_background10">
+        <item>#FCFBF6</item>
+        <item>#C56546</item>
+        <item>#FCFBF6</item>
+        <item>#2AACAC</item>
+        <item>#FCFBF6</item>
+        <item>#8576B5</item>
+        <item>#FCFBF6</item>
+        <item>#E3BA30</item>
+        <item>#FCFBF6</item>
+        <item>#504F98</item>
+    </array>
+</resources>

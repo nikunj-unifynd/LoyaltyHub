@@ -5,15 +5,20 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28229166666666666" />
         <entry key="mylibrary/src/main/res/drawable/bottom_corners_8_dp_outline_filled.xml" value="0.1265" />
+        <entry key="mylibrary/src/main/res/drawable/card_transparent_background.xml" value="0.1915" />
         <entry key="mylibrary/src/main/res/drawable/ic_bg_spin_the_wheel_home.xml" value="0.1265" />
+        <entry key="mylibrary/src/main/res/drawable/ic_coin.xml" value="0.1395" />
         <entry key="mylibrary/src/main/res/drawable/ic_illustration_empty_benefits.xml" value="0.1265" />
         <entry key="mylibrary/src/main/res/drawable/ic_time.xml" value="0.1265" />
         <entry key="mylibrary/src/main/res/drawable/top_corners_8_dp_outline_filled.xml" value="0.1265" />
+        <entry key="mylibrary/src/main/res/drawable/view_wheel_circle_center_seq.xml" value="0.1355" />
+        <entry key="mylibrary/src/main/res/drawable/view_wheel_stand_seq.xml" value="0.2185" />
         <entry key="mylibrary/src/main/res/font/font_circularstd_bold.xml" value="0.3076923076923077" />
         <entry key="mylibrary/src/main/res/layout/activity_loyalty_hub.xml" value="0.19113573407202217" />
         <entry key="mylibrary/src/main/res/layout/activity_spin_the_wheel.xml" value="0.23854166666666668" />
         <entry key="mylibrary/src/main/res/layout/activity_spin_wheel_feed.xml" value="0.23854166666666668" />
-        <entry key="mylibrary/src/main/res/layout/list_spin_wheel_item.xml" value="0.45" />
+        <entry key="mylibrary/src/main/res/layout/list_spin_wheel_item.xml" value="0.23854166666666668" />
+        <entry key="mylibrary/src/main/res/layout/lucky_wheel_layout.xml" value="0.1" />
         <entry key="mylibrary/src/main/res/layout/toolbar_generic.xml" value="0.2375" />
       </map>
     </option>

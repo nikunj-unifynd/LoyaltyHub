@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.android.loyality.core.customViews.customwheel.PielView
+    <com.lib.mylibrary.core.customViews.customWheel.PielView
         android:id="@+id/pieView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

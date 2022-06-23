@@ -59,7 +59,7 @@ data class SpinWheelFeedDto(
                 @SerializedName("benefitId")
                 val benefitId: Int,
                 @SerializedName("benefitType")
-                val benefitType: Int,
+                val benefitType: Long,
                 @SerializedName("couponId")
                 val couponId: Int,
                 @SerializedName("couponName")

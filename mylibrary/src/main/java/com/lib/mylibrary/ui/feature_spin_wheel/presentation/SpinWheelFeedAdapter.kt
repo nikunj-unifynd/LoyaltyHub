@@ -3,6 +3,7 @@ package com.lib.mylibrary.ui.feature_spin_wheel.presentation
 import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
@@ -46,35 +47,35 @@ class SpinWheelFeedAdapter(private val interaction: Interaction? = null) :
             binding.executePendingBindings()
             binding.tvTitle.text = item.name
             if(item.benefitsData.isNullOrEmpty()){
-                binding.llCoupons.hideView()
-                binding.llRewards.hideView()
-                binding.llPointGems.showView()
-                binding.tvPointsGemsFrom.text = "Try your luck at winning some points + stars"
+                binding.llCoupons.visibility = View.GONE
+                binding.llRewards.visibility = View.GONE
+                binding.llPointGems.visibility = View.VISIBLE
+                binding.tvPointsGemsFrom.text = "Try your luck at winning some points and gems"
             }else{
-                val couponOfferingStoresList = item.benefitsData.filter {it.benefitType == 1}
-                val rewardOfferingStoresList = item.benefitsData.filter {it.benefitType == 2}
-                val pointsOfferingStoresList = item.benefitsData.filter {it.benefitType == 3}
-                val gemsOfferingStoresList = item.benefitsData.filter {it.benefitType == 4}
+                val couponOfferingStoresList = item.benefitsData.filter {it.benefitType == 1L}
+                val rewardOfferingStoresList = item.benefitsData.filter {it.benefitType == 2L}
+                val pointsOfferingStoresList = item.benefitsData.filter {it.benefitType == 3L}
+                val gemsOfferingStoresList = item.benefitsData.filter {it.benefitType == 4L}
                 //val nonEmptyLogoStoresList = item.benefitsData.filter { !it.logo.isNullOrEmpty() }
                 if(!couponOfferingStoresList.isNullOrEmpty()){
-                    binding.llCoupons.showView()
-                    binding.tvCouponsFrom.text = "Try your luck at winning some vouchers from"
+                    binding.llCoupons.visibility = View.VISIBLE
+                    binding.tvCouponsFrom.text = "Try your luck at winning some coupons from"
                     when(couponOfferingStoresList.size){
                         1-> {
-                            binding.llCouponStoresImages.showView()
-                            binding.ivCoupStoreOne.showView()
-                            binding.ivCoupStoreTwo.hideView()
-                            binding.ivCoupStoreThree.hideView()
+                            binding.llCouponStoresImages.visibility = View.VISIBLE
+                            binding.ivCoupStoreOne.visibility = View.VISIBLE
+                            binding.ivCoupStoreTwo.visibility = View.GONE
+                            binding.ivCoupStoreThree.visibility = View.GONE
                             Glide.with(binding.root.context)
                                 .load(couponOfferingStoresList[0].logo)
                                 .into(binding.ivCoupStoreOne)
                         }
 
                         2-> {
-                            binding.llCouponStoresImages.showView()
-                            binding.ivCoupStoreOne.showView()
-                            binding.ivCoupStoreTwo.showView()
-                            binding.ivCoupStoreThree.hideView()
+                            binding.llCouponStoresImages.visibility = View.VISIBLE
+                            binding.ivCoupStoreOne.visibility = View.VISIBLE
+                            binding.ivCoupStoreTwo.visibility = View.VISIBLE
+                            binding.ivCoupStoreThree.visibility = View.GONE
                             Glide.with(binding.root.context)
                                 .load(couponOfferingStoresList[0].logo)
                                 .into(binding.ivCoupStoreOne)
@@ -84,10 +85,10 @@ class SpinWheelFeedAdapter(private val interaction: Interaction? = null) :
                         }
 
                         3-> {
-                            binding.llCouponStoresImages.showView()
-                            binding.ivCoupStoreOne.showView()
-                            binding.ivCoupStoreTwo.showView()
-                            binding.ivCoupStoreThree.showView()
+                            binding.llCouponStoresImages.visibility = View.VISIBLE
+                            binding.ivCoupStoreOne.visibility = View.VISIBLE
+                            binding.ivCoupStoreTwo.visibility = View.VISIBLE
+                            binding.ivCoupStoreThree.visibility = View.VISIBLE
                             Glide.with(binding.root.context)
                                 .load(couponOfferingStoresList[0].logo)
                                 .into(binding.ivCoupStoreOne)
@@ -100,10 +101,10 @@ class SpinWheelFeedAdapter(private val interaction: Interaction? = null) :
                         }
 
                         else->{
-                            binding.llCouponStoresImages.showView()
-                            binding.ivCoupStoreOne.showView()
-                            binding.ivCoupStoreTwo.showView()
-                            binding.ivCoupStoreThree.showView()
+                            binding.llCouponStoresImages.visibility = View.VISIBLE
+                            binding.ivCoupStoreOne.visibility = View.VISIBLE
+                            binding.ivCoupStoreTwo.visibility = View.VISIBLE
+                            binding.ivCoupStoreThree.visibility = View.VISIBLE
                             Glide.with(binding.root.context)
                                 .load(couponOfferingStoresList[0].logo)
                                 .into(binding.ivCoupStoreOne)
@@ -117,11 +118,11 @@ class SpinWheelFeedAdapter(private val interaction: Interaction? = null) :
 
                     }
                 }else{
-                    binding.llCoupons.hideView()
+                    binding.llCoupons.visibility = View.GONE
                 }
 
                 if(!rewardOfferingStoresList.isNullOrEmpty()){
-                    binding.llRewards.showView()
+                    binding.llRewards.visibility = View.VISIBLE
                     if(!binding.llCoupons.isVisible()){
                         binding.tvRewardsFrom.text = "Try your luck at winning some rewards from"
                     }else{
@@ -129,20 +130,20 @@ class SpinWheelFeedAdapter(private val interaction: Interaction? = null) :
                     }
                     when(rewardOfferingStoresList.size){
                         1-> {
-                            binding.llRewardStoresImages.showView()
-                            binding.ivRewaStoreOne.showView()
-                            binding.ivRewaStoreTwo.hideView()
-                            binding.ivRewaStoreThree.hideView()
+                            binding.llRewardStoresImages.visibility = View.VISIBLE
+                            binding.ivRewaStoreOne.visibility = View.VISIBLE
+                            binding.ivRewaStoreTwo.visibility = View.GONE
+                            binding.ivRewaStoreThree.visibility = View.GONE
                             Glide.with(binding.root.context)
                                 .load(rewardOfferingStoresList[0].logo)
                                 .into(binding.ivRewaStoreOne)
                         }
 
                         2-> {
-                            binding.llRewardStoresImages.showView()
-                            binding.ivRewaStoreOne.showView()
-                            binding.ivRewaStoreTwo.showView()
-                            binding.ivRewaStoreThree.hideView()
+                            binding.llRewardStoresImages.visibility = View.VISIBLE
+                            binding.ivRewaStoreOne.visibility = View.VISIBLE
+                            binding.ivRewaStoreTwo.visibility = View.VISIBLE
+                            binding.ivRewaStoreThree.visibility = View.GONE
                             Glide.with(binding.root.context)
                                 .load(rewardOfferingStoresList[0].logo)
                                 .into(binding.ivRewaStoreOne)
@@ -152,10 +153,10 @@ class SpinWheelFeedAdapter(private val interaction: Interaction? = null) :
                         }
 
                         3-> {
-                            binding.llRewardStoresImages.showView()
-                            binding.ivRewaStoreOne.showView()
-                            binding.ivRewaStoreTwo.showView()
-                            binding.ivRewaStoreThree.showView()
+                            binding.llRewardStoresImages.visibility = View.VISIBLE
+                            binding.ivRewaStoreOne.visibility = View.VISIBLE
+                            binding.ivRewaStoreTwo.visibility = View.VISIBLE
+                            binding.ivRewaStoreThree.visibility = View.VISIBLE
                             Glide.with(binding.root.context)
                                 .load(rewardOfferingStoresList[0].logo)
                                 .into(binding.ivRewaStoreOne)
@@ -168,10 +169,10 @@ class SpinWheelFeedAdapter(private val interaction: Interaction? = null) :
                         }
 
                         else ->{
-                            binding.llRewardStoresImages.showView()
-                            binding.ivRewaStoreOne.showView()
-                            binding.ivRewaStoreTwo.showView()
-                            binding.ivRewaStoreThree.showView()
+                            binding.llRewardStoresImages.visibility = View.VISIBLE
+                            binding.ivRewaStoreOne.visibility = View.VISIBLE
+                            binding.ivRewaStoreTwo.visibility = View.VISIBLE
+                            binding.ivRewaStoreThree.visibility = View.VISIBLE
                             Glide.with(binding.root.context)
                                 .load(rewardOfferingStoresList[0].logo)
                                 .into(binding.ivRewaStoreOne)
@@ -185,45 +186,30 @@ class SpinWheelFeedAdapter(private val interaction: Interaction? = null) :
 
                     }
                 }else{
-                    binding.llRewards.hideView()
+                    binding.llRewards.visibility = View.GONE
                 }
 
                 if(!pointsOfferingStoresList.isNullOrEmpty() && !gemsOfferingStoresList.isNullOrEmpty()){
-                    binding.llPointGems.showView()
+                    binding.llPointGems.visibility = View.VISIBLE
                     if(!binding.llCoupons.isVisible() && !binding.llRewards.isVisible()){
-                        binding.tvPointsGemsFrom.text = "Try your luck at winning some points + stars"
-                    }else if (binding.llRewards.isVisible() &&!binding.llCoupons.isVisible() ){
-                        binding.llPointGems.showView()
-                        binding.tvPointsGemsReward.hideView()
-                        binding.tvPointsGemsFrom.text = " + points + stars"
-                    }else if (binding.llRewards.isVisible()) {
-                        binding.llPointGems.hideView()
-                        binding.tvPointsGemsReward.showView()
-                        binding.tvPointsGemsReward.text = " + points + stars"
+                        binding.tvPointsGemsFrom.text = "Try your luck at winning some points and gems"
                     }else{
-                        binding.tvPointsGemsFrom.text = " + points + stars"
+                        binding.tvPointsGemsFrom.text = " + points and gems"
                     }
                 }else if(!pointsOfferingStoresList.isNullOrEmpty() && gemsOfferingStoresList.isNullOrEmpty()){
-                    binding.llPointGems.showView()
+                    binding.llPointGems.visibility = View.VISIBLE
                     if(!binding.llCoupons.isVisible() && !binding.llRewards.isVisible()){
                         binding.tvPointsGemsFrom.text = "Try your luck at winning some points"
-                    }else if (binding.llRewards.isVisible()){
-                        binding.llPointGems.hideView()
-                        binding.tvPointsGemsReward.showView()
-                        binding.tvPointsGemsReward.text = " + points"
                     }else{
+
                         binding.tvPointsGemsFrom.text = " + points"
                     }
                 }else if(!gemsOfferingStoresList.isNullOrEmpty() && pointsOfferingStoresList.isNullOrEmpty()){
-                    binding.llPointGems.showView()
+                    binding.llPointGems.visibility = View.VISIBLE
                     if(!binding.llCoupons.isVisible() && !binding.llRewards.isVisible()){
-                        binding.tvPointsGemsFrom.text = "Try your luck at winning some stars"
-                    }else if (binding.llRewards.isVisible()){
-                        binding.llPointGems.hideView()
-                        binding.tvPointsGemsReward.showView()
-                        binding.tvPointsGemsReward.text = " + stars"
+                        binding.tvPointsGemsFrom.text = "Try your luck at winning some gems"
                     }else{
-                        binding.tvPointsGemsFrom.text = " + stars"
+                        binding.tvPointsGemsFrom.text = " + gems"
                     }
                 }else{
                     Log.d(TAG, "bind: pointsStoresList and gemsStoresList both empty")

@@ -242,14 +242,7 @@
                     android:layout_marginStart="-4dp"/>
 
             </LinearLayout>
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvPointsGemsReward"
-                android:layout_width="wrap_content"
-                android:visibility="gone"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                style="@style/Header100TextView"
-                app:textViewColor="@{colors.TEXT_COLOR}"/>
+
 
         </LinearLayout>
 

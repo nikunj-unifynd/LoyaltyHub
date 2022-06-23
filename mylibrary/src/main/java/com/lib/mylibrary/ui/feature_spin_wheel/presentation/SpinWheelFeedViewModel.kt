@@ -38,7 +38,7 @@ class SpinWheelFeedViewModel: ViewModel() {
                 is NetworkResponse.ServerError -> {
                     uiStateChannel.send(UIState.Error(response.body?.status?.code.toString()))
         //            Timber.d("Server Error")
-                    Log.d("ViewModel", " Server Error ")
+                    Log.d("ViewModel", " Server Error " + response.error.toString())
                 }
 
                 is NetworkResponse.NetworkError -> {

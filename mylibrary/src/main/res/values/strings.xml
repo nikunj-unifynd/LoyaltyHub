@@ -17,6 +17,8 @@
     <string name="reward_unlocked">Reward Unlocked</string>
     <string name="unlock_coupon">Unlock Coupon</string>
     <string name="view_unlocked_coupons">View Unlocked Coupons</string>
+    <string name="view_unlocked_rewards">View Unlocked Rewards</string>
+
     <string name="spin_wheel_feed_default_text"><![CDATA[Play and win a chance to earn some points, gems, coupons & rewards]]></string>
     <string name="oops_with_exclamation">Oops!</string>
     <string name="no_active_spins">There are no active spin the wheels at the moment</string>

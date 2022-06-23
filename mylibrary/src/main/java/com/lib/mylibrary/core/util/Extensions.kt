@@ -27,6 +27,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import java.io.*
+import java.net.HttpURLConnection
+import java.net.URL
+import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -273,5 +276,25 @@ class FlowObserver<T> (
                 else -> { }
             }
         })
+    }
+}
+
+
+fun getFormattedPoints(points : String): String? {
+    val roundedBalance: Int = points.split(".")[0].toInt()
+    val formatter = DecimalFormat("##,##,###")
+    return formatter.format(roundedBalance)
+}
+fun getBitmapFromURL(src: String?): Bitmap? {
+    return try {
+        val url = URL(src)
+        val connection: HttpURLConnection = url.openConnection() as HttpURLConnection
+        connection.setDoInput(true)
+        connection.connect()
+        val input: InputStream = connection.getInputStream()
+        BitmapFactory.decodeStream(input)
+    } catch (e: IOException) {
+        e.printStackTrace()
+        null
     }
 }

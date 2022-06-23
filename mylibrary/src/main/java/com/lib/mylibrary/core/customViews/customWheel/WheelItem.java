@@ -14,5 +14,6 @@ public class WheelItem {
     public Bitmap iconBottom;
     public String bottomText;
     public String middleText;
+    public boolean isSmallDevice;
     public int color;
 }

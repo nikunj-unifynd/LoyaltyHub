@@ -16,6 +16,9 @@
             name="localColors"
             type="com.lib.mylibrary.ui.feature_spin_wheel.presentation.SpinTheWheelColors" />
 
+        <variable
+            name="viewModel"
+            type="com.lib.mylibrary.ui.feature_spin_wheel.presentation.SpinTheWheelViewModel"/>
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/cvMainView"
@@ -27,22 +30,22 @@
 
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivBackSpinWheel"
+        android:id="@+id/ivBack"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_margin="20dp"
         android:src="@drawable/ic_arrow_back"
-        android:tint="@color/cardview_dark_background"
+        android:tint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivHelpSpinWheel"
+        android:id="@+id/ivHelp"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_margin="20dp"
         android:src="@drawable/ic_help"
-        android:tint="@color/cardview_dark_background"
+        android:tint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,89 +55,102 @@
         android:layout_height="24dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
-        android:tint="@color/cardview_dark_background"
+        android:tint="@color/white"
         android:src="@drawable/ic_past_bookings"
-        app:layout_constraintEnd_toStartOf="@+id/ivHelpSpinWheel"
+        app:layout_constraintEnd_toStartOf="@+id/ivHelp"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/customCardView"
+    <androidx.cardview.widget.CardView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:layout_marginRight="16dp"
         android:layout_weight="1"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
 
-        <RelativeLayout
-            android:id="@+id/clPhoenixPoints"
-            android:layout_width="match_parent"
+
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:id="@+id/customCardView"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:background="@drawable/card_transparent_background"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPhoenixPoints"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_coin" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoenixPoints"
+            style="@style/Header100TextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="4dp"
-            android:paddingTop="4dp"
-            android:paddingEnd="8dp"
-            android:paddingBottom="4dp">
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_toRightOf="@+id/ivPhoenixPoints"
+            android:text=""
+            app:textViewColor="@{localColors.TEXT_COLOR}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivPhoenixPoints"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_centerVertical="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_coin" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tvPhoenixPoints"
+            android:background="@color/light_mid_gray" />
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPhoenixGems"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_gem" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvPhoenixPoints"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="6dp"
-                android:layout_toRightOf="@+id/ivPhoenixPoints"
-                android:text=""
-                style="@style/Header100TextView"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoenixGems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:layout_toRightOf="@+id/ivPhoenixGems"
+            android:text=""
+            app:textViewColor="@{localColors.TEXT_COLOR}"
 
-            <View
-                android:id="@+id/divider"
-                android:layout_width="1dp"
-                android:layout_height="12dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="8dp"
-                android:layout_toRightOf="@+id/tvPhoenixPoints"
-                android:background="@color/light_mid_gray" />
+            style="@style/Header100TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivPhoenixGems"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="8dp"
-                android:layout_toRightOf="@+id/divider"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_gem" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvPhoenixGems"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="4dp"
-                android:layout_toRightOf="@+id/ivPhoenixGems"
-                android:text=""
-                style="@style/Header100TextView"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
 
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -155,6 +171,7 @@
         android:layout_marginTop="60dp"
         android:text="@string/claim_your_free_spin"
         style="@style/Header300TextView"
+        app:textViewColor="@{localColors.TEXT_COLOR}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/customCardView" />
@@ -190,7 +207,7 @@
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -233,6 +250,7 @@
             android:minLines="1"
             android:maxLines="3"
             android:ellipsize="end"
+            app:textViewColor="@{localColors.TEXT_COLOR}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -292,6 +310,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
+                        app:textViewColor="@{localColors.TEXT_COLOR}"
                         style="@style/Header300TextView" />
                 </LinearLayout>
 
@@ -327,6 +346,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
+                        app:textViewColor="@{localColors.TEXT_COLOR}"
                         android:text="@string/something_went_wrong"
                         style="@style/Header300TextView"/>
                 </LinearLayout>
@@ -385,6 +405,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="10"
                                 android:textAllCaps="true"
+                                android:textColor="@color/black"
                                 style="@style/Header500TextView"
                                 app:textAllCaps="true" />
 
@@ -404,7 +425,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/unlock_reward"
-                            style="@style/ButtonRegularTextView" />
+                            style="@style/ButtonRegularTextView"
+                            app:textViewColor="@{localColors.TEXT_COLOR}"/>
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="16dp"
@@ -472,6 +494,7 @@
                                 android:text="10"
                                 android:textAllCaps="true"
                                 style="@style/Header500TextView"
+                                android:textColor="@color/black"
                                 app:textAllCaps="true" />
 
                         </LinearLayout>
@@ -535,6 +558,7 @@
                                 android:text="10"
                                 android:textAllCaps="true"
                                 style="@style/Header500TextView"
+                                android:textColor="@color/black"
                                 app:textAllCaps="true" />
 
                         </LinearLayout>
@@ -553,6 +577,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/unlock_coupon"
+                            app:textViewColor="@{localColors.TEXT_COLOR}"
                             style="@style/ButtonRegularTextView"/>
 
                         <androidx.appcompat.widget.AppCompatImageView
@@ -611,6 +636,7 @@
                             android:layout_marginEnd="10dp"
                             android:gravity="center_vertical"
                             android:text="x"
+                            app:textViewColor="@{localColors.TEXT_COLOR}"
                             style="@style/Header200TextView" />
 
                         <com.google.android.material.card.MaterialCardView
@@ -649,6 +675,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="20dp"
+                        app:textViewColor="@{localColors.TEXT_COLOR}"
                         android:text="You won a reward from"
                         style="@style/Header100TextView"/>
 
@@ -659,6 +686,7 @@
                         android:layout_marginTop="10dp"
                         android:gravity="center_horizontal"
                         android:maxLines="2"
+                        app:textViewColor="@{localColors.TEXT_COLOR}"
                         style="@style/Header600TextView"/>
 
                     <LinearLayout
@@ -674,6 +702,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/view_unlocked_coupons"
+                            app:textViewColor="@{localColors.TEXT_COLOR}"
                             style="@style/ButtonRegularTextView" />
 
                             <androidx.appcompat.widget.AppCompatImageView
@@ -713,7 +742,6 @@
         android:layout_height="58dp"
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/view_wheel_arrow_seq"
         app:layout_constraintBottom_toTopOf="@+id/clWheelStand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -736,6 +764,7 @@
             android:gravity="center_horizontal"
             android:text="@string/you_have_exhausted_daily_spins"
             android:visibility="gone"
+            app:textViewColor="@{localColors.TEXT_COLOR}"
             style="@style/ButtonRegularTextView"/>
 
         <com.google.android.material.card.MaterialCardView
@@ -745,8 +774,10 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
-            android:visibility="gone"
+            android:visibility="visible"
             app:cardCornerRadius="8dp"
+            android:elevation="0dp"
+            app:cardBgColor="@{localColors.BUTTON_COLOR}"
             >
 
             <LinearLayout
@@ -760,38 +791,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/spin_the_wheel"
+                    android:textColor="@color/black"
+                    app:textViewColor="@{localColors.TEXT_COLOR}"
                     style="@style/ButtonRegularTextView" />
 
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/btnSpinAgain"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:visibility="gone"
-            app:cardCornerRadius="8dp"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|center_vertical"
-                android:orientation="horizontal">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/spin_again"
-                    style="@style/ButtonRegularTextView"/>
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvLock"

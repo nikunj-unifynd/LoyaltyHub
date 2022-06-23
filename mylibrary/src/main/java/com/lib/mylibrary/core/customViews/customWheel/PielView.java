@@ -279,6 +279,8 @@ public class PielView extends View {
         Rect rect = new Rect(x - imgWidth / 3, y - imgWidth / 3, x + imgWidth / 3, y + imgWidth / 3);
 
         canvas.drawBitmap(bitmap, null,rect, null);*/
+        bitmap = getResizedBitmap(bitmap,80,80);
+
         int imgWidth = (mRadius / mLuckyItemList.size()); //- mImagePadding;
         float angle = (float) ((tmpAngle + 360 / mLuckyItemList.size() / 2) * Math.PI / 180);
         //calculate x and y
@@ -345,6 +347,8 @@ public class PielView extends View {
         float initFloat = (tmpAngle + 360f / arraySize / 2);
         canvas.drawBitmap(bitmap, null, rect, null);
         canvas.rotate(initFloat + (arraySize / 36f), x, y);*/
+        bitmap = getResizedBitmap(bitmap,100,100);
+
         int imgWidth = (mRadius / mLuckyItemList.size()); //- mImagePadding;
         float angle = (float) ((tmpAngle + 360 / mLuckyItemList.size() / 2) * Math.PI / 180);
         //calculate x and y
@@ -378,6 +382,7 @@ public class PielView extends View {
         float initFloat = (tmpAngle + 360f / arraySize / 2);
         canvas.drawBitmap(bitmap, null, rect, null);
         canvas.rotate(initFloat + (arraySize / 36f), x, y);*/
+        bitmap = getResizedBitmap(bitmap,50,50);
         int imgWidth = (mRadius / mLuckyItemList.size()); //- mImagePadding;
         float angle = (float) ((tmpAngle + 360 / mLuckyItemList.size() / 2) * Math.PI / 180);
         //calculate x and y
